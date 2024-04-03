@@ -3,81 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
     <title>Login - SneakersDay</title>
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background-image:url('https://i.pinimg.com/564x/c9/02/37/c902371845cf73a8f883d0d5acab9eb6.jpg');
-            text-align: center;
-        }
-        div{
-            background-color: rgba(0, 0, 0, 0.9);
-            position: absolute;
-            justify-content: center;
-
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            padding: 80px;
-            border-radius: 15px;
-            color: white;            
-        }
-        input{
-            padding: 15px;
-            border: none;
-            outline: none;
-            font-size: 15px;
-        }
-        button{
-            background-color: rgb(2, 83, 165);
-            border: none;
-            padding: 15px;
-            width: 100%;
-            border-radius: 10px;
-            color: white;
-            font-size: 15px;
-        }
-        button:hover{
-            background-color: rgb(2, 133, 177);
-            cursor: pointer;
-        }
-        footer{
-            position: fixed;
-            bottom: 0;
-            font-size: 12px;
-        }
-    </style>
 </head>
 <body>
-    <div>
-        <h3>Login</h3>
-        <input type="text" placeholder="Usuário" id="usuário">
-        <br><br>
-        <input type="password" placeholder="Senha" id="senha">
-        <br><br>
-        <input type="submit" onclick="logar()">
-    </div>
-
-<script>
-
-function logar(){
-
-    var usuário = document.getElementById('usuário').value;
-    var senha = document.getElementById('senha').value;
-
-    if(usuário == "teste" && senha == "teste"){
-        alert('Sucesso');
-    }
-    else{
-        alert('Usuário ou senha incorretos');
-    }
-
-}
-
-</script>
+    <header>
+        <h1>Portal de Login - SneakersDay</h1>
+    </header>
+    <main>
+        <form action="dashboard.html" method="post">
+            <label for="username">Usuário:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Senha:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Login">
+        </form>
+    </main>
     <footer>
-    <p>&copy; 2024 SneakersDay. Todos os direitos reservados.</p>
-</footer>
+        <p>&copy; 2024 SneakersDay. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
