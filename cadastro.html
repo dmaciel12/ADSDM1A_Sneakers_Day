@@ -47,7 +47,7 @@
 </head>
 <body>
     <div>
-        <h1>Cadastro</h1>
+        <h3>Cadastro</h3>
         <input type="name" placeholder="Nome" id="nome">
         <br><br>
         <input type="email" placeholder="E-mail" id="email">
@@ -56,15 +56,30 @@
         <br><br>
         <input type="confirmpassword" placeholder="Confirmar Senha" id="confirmarsenha">
         <br><br>
-        <button>Cadastrar</button>
+        <input type="submit" onclick="cadastrar()">
     </div>
+    
+    <script>
+
+function Cadastro(){
+
+var name = document.getElementById('nome').value;
+var email = document.getElementById('email').value;
+var senha = document.getElementById('senha').value;
+var confirmarsenha = document.getElementById('confimar senha').value;
+
+if(usuário == "name" && email == "teste" && senha == "teste"){
+    alert('Sucesso');
+}
+else{
+    alert('Usuário ou senha incorretos');
+}
+
+}
+
+    </script>
     <footer>
         <p>&copy; 2024 SkeakersDay. Todos os direitos reservados.</p>
     </footer>
-    <script>
-
-        
-
-    </script>
 </body>
 </html>
