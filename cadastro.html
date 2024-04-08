@@ -7,76 +7,126 @@
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
-            background-image:url('https://c0.wallpaperflare.com/preview/943/148/889/nike-air-jordan-1-shoes-near-chain-link-fence.jpg');
-            text-align: center;
-            background-size: cover;
-            color: white;
+            background-image: url('https://c0.wallpaperflare.com/preview/943/148/889/nike-air-jordan-1-shoes-near-chain-link-fence.jpg');
         }
-        div{
-            background-color: rgba(0, 0, 0, 0.9);
+
+        .box{
+            color: white;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            padding: 80px;
-            border-radius: 15px;
-            color: white;            
-        }
-        input{
+            background-color: rgba(0, 0, 0, 0.8);
             padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+        }
+        fieldset{
+            border: 3px solid rgb(1, 4, 96)
+            
+        }
+        legend{
+            border: 1px solid rgb(1, 4, 96);
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(1, 4, 96);
+            border-radius: 8px;           
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
             border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput ,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        #data_nascimento{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
             outline: none;
             font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        button{
-            background-color: rgb(2, 83, 165);
+        #submit{
+            background-color: blue;
             border: none;
             padding: 15px;
             width: 100%;
-            border-radius: 10px;
             color: white;
             font-size: 15px;
-        }
-        button:hover{
-            background-color: rgb(2, 133, 177);
             cursor: pointer;
+            border-radius: 10px;
         }
-        footer{
-            position: fixed;
-            bottom: 0;
+        #submit:hover{
+            background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220))
         }
     </style>
 </head>
 <body>
-    <form id="cadastro">
-        <h3>Cadastro</h3>
-        <input type="name" placeholder="Nome" id="nome">
-        <br><br>
-        <input type="email" placeholder="E-mail" id="email">
-        <br><br>
-        <input type="password" placeholder="Senha" id="senha">
-        <br><br>
-        <input type="password" placeholder="Confirmar Senha" id="confirmarsenha">
-        <br><br>
-        <input type="submit" onclick="cadastrar()">
-    </form>
-    
-    <script>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Cadastro</b></legend>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for= "nome" class="labelInput" >Nome completo</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for= "nome" class="labelInput" >E-mail</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="password" id="password" class="inputUser" required>
+                    <label for= "nome" class="labelInput" >Senha</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="password" id="password" class="inputUser" required>
+                    <label for= "nome" class="labelInput" >Confirme a senha</label>
+                    <br><br>
+                </div>
 
-function cadastrar(){
-
-    var name = document.getElementById('nome').value;
-    var email = document.getElementById('email').value;
-    var senha = document.getElementById('senha').value;
-    var confirmarsenha = document.getElementById('confimarsenha').value;
-
-    if(usuário == "teste" && email == "teste@gmail.com" && senha == "1234" && confirmarsenha == "1234"){
-    
-        window.alert('Sucesso');
-}
-        alert('As senhas não estão iguais');
-}
-    </script>
+                <p>Sexo:</p>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <br><br>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <br><br>
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro">Outro</label>
+                <br><br>
+                <br><br>
+                <label for= "data_nascimento"><b>Data de Nascimento:<b></label>
+                <br><br>
+                <input type="date" name="data_nascimento" id="data_nascimento" required>
+                <br><br>
+                <br><br>
+                <input type="submit" name="submit" id="submit">       
+            </fieldset>
+        </form>
+    </div>
     <footer>
         <p>&copy; 2024 SkeakersDay. Todos os direitos reservados.</p>
     </footer>
