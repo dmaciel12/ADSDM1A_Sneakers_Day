@@ -1,82 +1,313 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - SneakersDay</title>
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(45deg, rgb(1, 90, 90), rgb(2, 53, 129));
-            text-align: center;
-        }
-        div{
-            background-color: rgba(0, 0, 0, 0.9);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            padding: 80px;
-            border-radius: 15px;
-            color: white;            
-        }
-        input{
-            padding: 15px;
-            border: none;
-            outline: none;
-            font-size: 15px;
-        }
-        button{
-            background-color: rgb(2, 83, 165);
-            border: none;
-            padding: 15px;
-            width: 100%;
-            border-radius: 10px;
-            color: white;
-            font-size: 15px;
-        }
-        button:hover{
-            background-color: rgb(2, 133, 177);
-            cursor: pointer;
-        }
-        footer{
-            position: fixed;
-            bottom: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cadastro - SneakerDay</title>
+  <style>
+
+    *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background-image: url('https://c0.wallpaperflare.com/preview/943/148/889/nike-air-jordan-1-shoes-near-chain-link-fence.jpg');
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.container{
+color: white;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+background-color: rgba(0, 0, 0, 0.9);
+padding: 15px;
+border-radius: 15px;
+width: 20%;
+font-size: 15px;
+}
+
+.header{
+  background: linear-gradient(120deg, #002028 0%, #021234 100%);
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  color: #FFF;
+}
+
+.form{
+  padding: 15px;
+}
+
+.form-content{
+  margin-bottom: 8px;
+  padding-bottom: 18px;
+  position: relative;
+}
+
+.form-content label{
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.form-content input{
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  padding: 8px;
+  border: 2px solid #dfdfdf;
+}
+
+.form-content a{
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  visibility: hidden;
+}
+
+.form button{
+  background: linear-gradient(120deg, #002028 0%, #021234 100%);
+  color: #FFF;
+  width: 100%;
+  border-radius: 14px;
+  padding: 10px;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 14px;
+}
+#submit:hover{
+    background-color: blue;
+}
+
+.form-content.error input{
+  border-color: #ff3b25;
+}
+
+.form-content.error a{
+  color: #ff3b25;
+  visibility: visible;
+  weight: 100%;
+}
+#data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius:10px;
+    outline: none;
+    font-size: 15px;
+}
+#feminino{
+    cursor: pointer;
+}
+#masculino{
+    cursor: pointer;
+}
+#outro{
+    cursor: pointer;
+}
+
+footer{
+position: fixed;
+bottom: 0;
+font-weight: 400;
+color: white;
+}
+  </style>
 </head>
 <body>
-    <form id="cadastro">
-        <h3>Cadastro</h3>
-        <input type="name" placeholder="Nome" id="nome">
-        <br><br>
-        <input type="email" placeholder="E-mail" id="email">
-        <br><br>
-        <input type="password" placeholder="Senha" id="senha">
-        <br><br>
-        <input type="confirmpassword" placeholder="Confirmar Senha" id="confirmarsenha">
-        <br><br>
-        <input type="submit" onclick="cadastrar()">
+
+  <div class="container">
+    <section class="header">
+      <h2>Cadastro</h2>
+    </section>
+
+    <form id="form" class="form">
+      <div class="form-content">
+        <label for="username"><b>Nome completo:<b></label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Digite o seu nome completo..."
+        />
+        <a>Aqui vai a mensagem de erro....</a>
+      </div>
+
+      <div class="form-content">
+        <label for="email"><b>Email:<b></label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Digite o seu email..."
+        />
+        <a>Aqui vai a mensagem de erro....</a>
+      </div>
+
+      <div class="form-content">
+        <label for="password"><b>Senha:<b></label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Digite sua senha..."
+        />
+        <a>Aqui vai a mensagem de erro....</a>
+      </div>
+
+      <div class="form-content">
+        <label for="password-confirmation"><b>Confirme sua senha:<b></label>
+        <input
+          type="password"
+          id="password-confirmation"
+          placeholder="Digite sua senha novamente..."
+        />
+        <a>Aqui vai a mensagem de erro....</a>
+      </div>
+      <p><b>Sexo:<b></p>
+      <br>
+                <input type="radio" id="feminino" name="genero" value="feminino">
+                <label for="feminino">Feminino</label>
+                <br><br>
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <label for="masculino">Masculino</label>
+                <br><br>
+                <input type="radio" id="outro" name="genero" value="outro">
+                <label for="outro">Outro</label>
+                <br><br>
+                <label for= "data_nascimento"><b>Data de Nascimento:<b></label>
+                <input type="date" name="data_nascimento" id="data_nascimento">
+                <br><br>
+      <button type="submit">Cadastrar</button>
+
     </form>
-    
-    <script>
 
-function cadastrar(){
+  </div>
+  
 
-    var name = document.getElementById('nome').value;
-    var email = document.getElementById('email').value;
-    var senha = document.getElementById('senha').value;
-    var confirmarsenha = document.getElementById('confimarsenha').value;
+  <script>
+    const form = document.getElementById("form");
+const username = document.getElementById("username")
+const email = document.getElementById("email")
+const password = document.getElementById("password")
+const passwordConfirmation = document.getElementById("password-confirmation");
 
-    if(usuário == "teste" && email === "teste@gmail.com" && senha === "1234" && confirmarsenha === "1234"){
-    
-        window.alert('Sucesso');
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  checkForm();
+})
+
+email.addEventListener("blur", () => {
+  checkInputEmail();
+})
+
+
+username.addEventListener("blur", () => {
+  checkInputUsername();
+})
+
+
+function checkInputUsername(){
+  const usernameValue = username.value;
+
+  if(usernameValue === ""){
+    errorInput(username, "Preencha um username!")
+  }else{
+    const formItem = username.parentElement;
+    formItem.className = "form-content"
+  }
+
 }
-        alert('As senhas não estão iguais');
+
+function checkInputEmail(){
+  const emailValue = email.value;
+
+  if(emailValue === ""){
+    errorInput(email, "O email é obrigatório.")
+  }else{
+    const formItem = email.parentElement;
+    formItem.className = "form-content"
+  }
+
+
 }
-    </script>
-    <footer>
-        <p>&copy; 2024 SkeakersDay. Todos os direitos reservados.</p>
-    </footer>
+
+
+function checkInputPassword(){
+  const passwordValue = password.value;
+
+  if(passwordValue === ""){
+    errorInput(password, "A senha é obrigatória.")
+  }else if(passwordValue.length < 8){
+    errorInput(password, "A senha precisa ter no mínimo 8 caracteres.")
+  }else{
+    const formItem = password.parentElement;
+    formItem.className = "form-content"
+  }
+
+
+}
+
+
+function checkInputPasswordConfirmation(){
+  const passwordValue = password.value;
+  const confirmationPasswordValue = passwordConfirmation.value;
+
+  if(confirmationPasswordValue === ""){
+    errorInput(passwordConfirmation, "A confirmação de senha é obrigatória.")
+  }else if(confirmationPasswordValue !== passwordValue){
+    errorInput(passwordConfirmation, "As senhas não são iguais.")
+  }else{
+    const formItem = passwordConfirmation.parentElement;
+    formItem.className = "form-content"
+  }
+
+
+}
+
+
+function checkForm(){
+  checkInputUsername();
+  checkInputEmail();
+  checkInputPassword();
+  checkInputPasswordConfirmation();
+
+  const formItems = form.querySelectorAll(".form-content")
+
+  const isValid = [...formItems].every( (item) => {
+    return item.className === "form-content"
+  });
+
+  if(isValid){
+    alert("CADASTRADO COM SUCESSO!")
+  }
+
+}
+
+
+function errorInput(input, message){
+  const formItem = input.parentElement;
+  const textMessage = formItem.querySelector("a")
+
+  textMessage.innerText = message;
+
+  formItem.className = "form-content error"
+
+}
+  </script>
+  <footer>
+    <p>&copy; 2024 SkeakersDay. Todos os direitos reservados.</p>
+</footer>
 </body>
 </html>
