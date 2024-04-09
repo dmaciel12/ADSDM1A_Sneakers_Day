@@ -4,10 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             * {
-              box-sizing: border-box
+              box-sizing: border-box;
             }
             body {
-              font-family: Verdana, sans-serif; margin:0
+              font-family: Verdana, sans-serif; margin:0;
+              background: linear-gradient(120deg, #002028 0%, #021234 100%);
           
             }
             .mySlides {
@@ -103,28 +104,38 @@
             @media only screen and (max-width: 300px) {
               .prev, .next,.text {font-size: 11px}
             }
+            .header{
+              text-align: center;
+              color: white;
+              font-family: arial;
+
+            }
         </style>
         </head>
     <body>
+      <div class="container">
+        <section class="header">
+          <h2>Registros de eventos passados.</h2>
+        </section>
 
         <div class="slideshow-container">
 
             <div class="mySlides fade">
               <div class="numbertext">1 / 3</div>
-              <img src="img2.webp" style="width: 100%">
-              <div class="text">Imagens de edições passadas do evento.</div>
+              <img src="https://cdn.shopify.com/s/files/1/2017/7541/files/DSC0489_2048x2048.jpg?v=1538508777" style="width: 100%">
+              <div class="text"></div>
             </div>
 
             <div class="mySlides fade">
               <div class="numbertext">1 / 3</div>
-              <img src="img1.webp" style="width: 100%">
-              <div class="text">Imagens de edições passadas do evento.</div>
+              <img src="https://thegamecollective.com.br/cdn/shop/articles/sold-out-confira-tudo-que-rolou-na-4a-edicao-do-eventothe-game.jpg?v=1630940591&width=1500" style="width: 100%">
+              <div class="text"></div>
             </div>
 
             <div class="mySlides fade">
               <div class="numbertext">1 / 3</div>
-              <img src="img3.webp" style="width: 100%">
-              <div class="text">Imagens de edições passadas do evento.</div>
+              <img src="https://cdn.shopify.com/s/files/1/2017/7541/files/DSC0502_2048x2048.jpg?v=1538508845" style="width: 100%">
+              <div class="text"></div>
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">❮</a>
