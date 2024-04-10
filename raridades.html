@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Raridades da SneakersDay</title>
+        <link rel="stylesheet" href="raridades.css">
+    </head>
+    <body>
+
+        <div class="img-slider">
+            <div class="slide active">
+                <img src="snk3.jpg" alt="">
+                <div class="info">
+                    <h2>Air Yeezy 2 October Red </h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://ca-times.brightspotcdn.com/dims4/default/15a30ea/2147483647/strip/true/crop/6122x4081+0+1/resize/1440x960!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fb3%2F10%2F10c245034893adf233fc1cf3071a%2F1351750-fi-sneaker-buyer-coolkicks-jlc-16185-021.jpg" alt="">
+                <div class="info">
+                    <h2>Air force 1 x Off-White</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://lojadrophype.com/cdn/shop/products/f865702b_800x.jpg?v=1641347941" alt="">
+                <div class="info">
+                    <h2>Air jordan 1 x Travis Scott</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.yampi.me/assets/stores/royal-clothing/uploads/images/nike-sb-dunk-low-freddy-krueger-36-659ad559297e9-large.png" alt="">
+                <div class="info">
+                    <h2>Dunk Sb Freddy krueger</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://acdn.mitiendanube.com/stores/002/029/660/products/01-41-6dfe0e28360ed7cdb716442848437574-640-0.jpg" alt="">
+                <div class="info">
+                    <h2>Air Jordan 1 Dior</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://media.revistagq.com/photos/5cb74bd9fd819bf1571297eb/master/w_1600,c_limit/zapatillas_mas_caras_del_mundo_1265.png" alt="">
+                <div class="info">
+                    <h2>Air Mag Back to the future</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="snk4.jpg" alt="">
+                <div class="info">
+                    <h2>Dunk SB x Off-White</h2>
+                </div>
+            </div>
+            <div class="navigation">
+              <div class="btn active"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+        var slides = document.querySelectorAll('.slide');
+        var btns = document.querySelectorAll('.btn');
+        let currentSlide = 1;
+
+        // Javascript for image slider manual navigation
+        var manualNav = function(manual){
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+
+                btns.forEach((btn) => {
+                    btn.classList.remove('active');
+                });
+            });
+
+            slides[manual].classlist.add('active');
+            btns[manual].classlist.add('active');
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+            });
+        });
+
+        //javascript for image slider autoplay navigation
+        var repeat = function(activeClass){
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+
+            var repeater = () => {
+                setTimeout(function(){
+                    [...active].forEach((activeSlide) => {
+                        activeSlide.classList.remove('active');
+                    });
+                slides[i].classList.add('active');
+                btns[i].classList.add('active');
+                i++;
+                
+                if(slides.length == i){
+                    i = 0
+                }
+                if(i >= slides.length){
+                    return;
+                }
+                repeater();
+                }, 10000);
+            }
+            repeater();
+        }
+        repeat();
+        </script>
+
+    </body>
+</html>
