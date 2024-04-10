@@ -251,3 +251,9 @@ label{
 .info-menu.active {
     display: block;
 }
+footer{
+    position: fixed;
+bottom: 0;
+font-weight: 400;
+color: white;
+}
