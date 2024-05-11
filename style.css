@@ -31,24 +31,11 @@ header{
     
 }
 
-header .logo {
-    position: relative;
-    color: #000;
-    font-size: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    display: flex; 
-    align-items: center; 
-}
-
 header .logo img {
-    width: 200px; /* Definindo a largura da imagem */
-    height: auto; /* Altura automática para manter a proporção */
-    margin-right: 10px; /* Espaçamento à direita da imagem */
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
 }
-
 
 header .navigation a {
     color: white;
