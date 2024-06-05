@@ -185,6 +185,7 @@
     position: sticky;
     top: 0;
     left: 0;
+    transition-delay: 2s;
     align-items: center;
     justify-content: center;
     color: white;
