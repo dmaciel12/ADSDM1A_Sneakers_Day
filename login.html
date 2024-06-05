@@ -12,8 +12,8 @@
 
 
     <link rel="stylesheet" href="login.css">
-    
-    <script src="login.js" defer></script>
+
+
     <title>login - SneakersDay</title>
 </head>
 
@@ -27,20 +27,20 @@
                     <h2 class="form-title">Login</h2>
 
                     <div class="form-input-container">
-                        <input type="email" class="form-input" placeholder="Usuário ou E-mail">
-                        <input type="password" class="form-input" placeholder="Senha">
+                        <input type="email" id="usuario" class="form-input" placeholder="Usuário ou E-mail">
+                        <input type="password" id="senha" class="form-input" placeholder="Senha">
                     </div>
                     <a href="#" class="form-link">Esqueceu a senha?</a>
-                    <button type="button" class="form-button">Entrar</button>
+                    <button class="form-button" id="btnLogar" onclick="">Logar</button>
                     <p class="mobile-text">Não tem conta? <a href="#" id="open-register-mobile">Registre-se</a></p>
                 </form>
                 <form class="form form-register">
                     <h2 class="form-title">Criar Conta</h2>
-                    <p class="text">Cadastre seu e-mail</p>
                     <div class="form-input-container">
-                        <input type="text" class="form-input" placeholder="Nome">
-                        <input type="email" class="form-input" placeholder="Email">
-                        <input type="password" class="form-input" placeholder="Senha">
+                        <input type="text" id="nome" class="form-input" placeholder="Nome">
+                        <input type="email" id="email" class="form-input" placeholder="Email">
+                        <input type="password" id="senha" class="form-input" placeholder="Senha">
+                        <input type="text" id="cpf-cnpj" class="form-input" placeholder="CPF/CNPJ">
                     </div>
                     <button type="button" class="form-button">Cadastrar</button>
 
@@ -67,7 +67,70 @@
         </div>
 
     </main>
+    <script>
+        const usuarios = [
+            {
+                login: 'david@gmail.com',
+                pass: '123456'
+            },
+            {
+                login: 'davy@gmail.com',
+                pass: '123456'
+            },
+            {
+                login: 'admin@gmail.com',
+                pass: 'admin'
+            }
+        ]
+
+        let botao = document.getElementById('btnLogar')
+
+        botao.addEventListener('click', function logar() {
+
+            let pegaUsuario = document.getElementById('usuario').value
+            let pegaSenha = document.getElementById('senha').value
+
+            for (let i in usuarios) {
+
+                if (pegaUsuario == usuarios[i].login) {
+                    alert('Sucesso')
+                }
+
+            }
+
+        })
+
+
+        function logar() {
+
+            var login = document.getElementById('usuario').value;
+            var senha = document.getElementById('senha').value;
+
+            if (login == "admin" && senha == "admin") {
+                alert('Sucesso');
+
+            } else {
+                alert('Usuario ou senha incorretos');
+            }
+
+        }
+
+    </script>
+
+    </script>
+    <script>'use strict'
+
+        const loginContainer = document.getElementById('login-container')
+
+        const moveOverlay = () => loginContainer.classList.toggle('move')
+
+        document.getElementById('open-register').addEventListener('click', moveOverlay)
+        document.getElementById('open-login').addEventListener('click', moveOverlay)
+
+        document.getElementById('open-register-mobile').addEventListener('click', moveOverlay)
+        document.getElementById('open-login-mobile').addEventListener('click', moveOverlay)</script>
 
 </body>
+
 
 </html>
