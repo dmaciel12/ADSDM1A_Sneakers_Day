@@ -1,95 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - SneakersDay</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-image: url(snk2.png);
-            text-align: center;
-            background-size: cover;
-        }
+    <script src="https://kit.fontawesome.com/df450c15b3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
 
-        div {
-            background-color: rgba(0, 0, 0, 0.774);
-            position: absolute;
-            justify-content: center;
 
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 80px;
-            border-radius: 15px;
-            color: white;
-            font-size: 25px;
-        }
-
-        input {
-            padding: 20px;
-            border: none;
-            outline: none;
-            font-size: 20px;
-            border-radius: 15px;
-        }
-
-        button {
-            background-color: rgb(2, 83, 165);
-            border: none;
-            padding: 30px;
-            width: 100%;
-            border-radius: 18px;
-            color: white;
-            font-size: 15px;
-        }
-
-        button:hover {
-            background-color: rgb(2, 133, 177);
-            cursor: pointer;
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            font-size: 12px;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="login.css">
+    
+    <script src="login.js" defer></script>
+    <title>login - SneakersDay</title>
 </head>
 
 <body>
-    <Header>
-        <div class="caixa">
-            <h3>Login</h3>
-            <input type="text" placeholder="Usuário" id="usuário">
-            <br><br>
-            <input type="password" placeholder="Senha" id="senha">
-            <br><br>
-            <input type="submit" onclick="logar()">
+    <main>
+        <div class="login-container" id="login-container">
+            <div class="form-container">
+                <form class="form form-login">
+
+
+                    <h2 class="form-title">Login</h2>
+
+                    <div class="form-input-container">
+                        <input type="email" class="form-input" placeholder="Usuário ou E-mail">
+                        <input type="password" class="form-input" placeholder="Senha">
+                    </div>
+                    <a href="#" class="form-link">Esqueceu a senha?</a>
+                    <button type="button" class="form-button">Entrar</button>
+                    <p class="mobile-text">Não tem conta? <a href="#" id="open-register-mobile">Registre-se</a></p>
+                </form>
+                <form class="form form-register">
+                    <h2 class="form-title">Criar Conta</h2>
+                    <p class="text">Cadastre seu e-mail</p>
+                    <div class="form-input-container">
+                        <input type="text" class="form-input" placeholder="Nome">
+                        <input type="email" class="form-input" placeholder="Email">
+                        <input type="password" class="form-input" placeholder="Senha">
+                    </div>
+                    <button type="button" class="form-button">Cadastrar</button>
+
+                    <p class="mobile-text">Já possui conta? <a href="#" id="open-login-mobile">Login</a></p>
+
+
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <h2 class="form-title form-title-light">Já possui conta?</h2>
+                    <p class="form-text">Para entrar na nossa plataforma faça login com suas informações</p>
+                    <button class="form-button form-button-light" id="open-login">Login</button>
+                </div>
+                <div class="overlay">
+                    <h2 class="form-title form-title-light">Olá SneakerHead!</h2>
+                    <p class="form-text">Cadastre-se e comece a usar a nossa plataforma on-line</p>
+                    <button class="form-button form-button-light" id="open-register">Cadastrar</button>
+                </div>
+
+
+            </div>
+
         </div>
-    </Header>
-    <script>
 
-        function logar() {
+    </main>
 
-            var usuário = document.getElementById('usuário').value;
-            var senha = document.getElementById('senha').value;
-
-            if (usuário == "teste" && senha == "teste") {
-                alert('Login Efetuado com Sucesso');
-            }
-            else {
-                alert('Usuário ou senha incorretos');
-            }
-
-        }
-
-    </script>
-    <footer>
-        <p>&copy; 2024 SneakersDay. Todos os direitos reservados.</p>
-    </footer>
 </body>
 
 </html>

@@ -1,249 +1,191 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-* {
+.page1 {
+    background-image: url(1.png);
+    background-color: #000;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-}
-
-section{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    background: url(https://wallpapers.com/images/featured/sneaker-x499s7jambwdigab.jpg);
-    background-position: center;
-    background-size: cover;
-    
-}
-
-header{
-    position: relative;
-    top: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    
-}
-
-header .logo img {
-    width: 200px;
-    height: auto;
-    margin-right: 10px;
-}
-
-header .navigation a {
-    color: white;
-    background: none;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    padding: 2px 15px;
-    border-radius: 20px;
-    transition: 0.3s;
-    transition-property: background;
-    font-size: 18px;
-}
-
-header .navigation a:not(:last-child){
-    margin-right: 30px;
-}
-
-header .navigation a:hover{
-    background:rgb(90, 85, 85);
-}
-
-.content{
-    max-width: 650px;
-    margin: 60px 100px;
-}
-
-.content .info h2{
-    color: whitesmoke;
-    font-size: 55px;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 1px;
-    line-height: 60px;
-    margin-bottom: 30px;
-}
-
-.content .info p{
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 40px;
-}
-
-.content .info-btn{
-    color: white;
-    background:grey;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding: 10px 20px;
-    border-radius: 10px; 
-    
-}
-
-.content .info-btn:hover{
-    background: rgb(65, 64, 64);
-}
-
-.media-icons{
-    display: flex;
     justify-content: center;
+    min-height: 100vh;
+    background-position: absolute;
+    background-size: cover;
+  }
+  .page2{
+    background-image: url(lgn.png);
+    background-color: #000;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: auto;
-    transition: 0.3s;
-    transition-property:transform;
-}
-
-.media-icons a{
-    position: relative;
-    color: #111;
-    font-size: 25px;
-}
-
-.media-icons a:not(:last-child){
- margin-right: 60px;   
-}
-
-.media-icons a:hover{
-    transform: scale(1.5);
-}
-
-label{
-    display: none;
-}
-
-#check{
-    z-index: 3;
-    display: none;
-}
-
-@media (max-width: 960px){
-    header.navigation{
-        display: none;
-    }
-
-    
-    label{
-        display: block;
-        font-size: 25px;
-        cursor: pointer;
-        transition: 0.3s;
-        transition-property: color;
-    }
-
-    label:hover{
-        color:#ffffff40;
-    }
-
-    label .close-btn{
-        display: none;
-    }
-
-    #check:checked ~ header .navigation{
-        z-index: 2;
-        position: fixed;
-        background: rgba(158, 156, 156);
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #check:checked ~ header .navigation a{
-        font-weight: 700;
-        margin-right: 0;
-        margin-bottom: 50px;
-        letter-spacing: 2px;
-    }
-
-    #check:checked ~ header label .menu-btn{
-        display: none;
-    }
-
-    #check:checked ~ header label .close-btn{
-        z-index: 2;
-        display: block;
-        position: fixed;
-    }
-
-    label .menu-btn{
-        position:absolute;
-    }
-
-    header .logo{
-        position: absolute;
-        bottom: -6px;
-    }
-
-    .content .info h2{
-        font-size: 45px;
-        line-height: 50px;
-    }
-
-    .content .info h2 span{
-        font-size: 40px;
-        font-weight: 600;
-    }
-
-    .content .info p{
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 560px){
-    .content .info h2{
-        font-size: 35px;
-        line-height: 40px;
-    }
-
-    .content .info h2 span{
-        font-size: 30px;
-        font-weight: 600;
-    }
-
-    .content .info p{
-        font-size: 14px;
-    }
-}
-
-.info-menu {
-    display: none;
+    justify-content: center;
+    min-height: 100vh;
+    background-position: absolute;
+    background-size: cover;
+  }
+  .page3{
+    background-image: url(3.png);
+    background-color: #000;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-position: absolute;
+    background-size: cover;
+  }
+  .page4{
+    background-image: url(9.png);
+    background-color: #000;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-position: absolute;
+    background-size: cover;
+  }
+  
+  
+  
+  .container .page1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .content {
+    text-align:left;
+    color: white;
     padding: 10px;
-    background-color: rgba(128, 128, 128, 0.345) ;
-    border: 1px solid none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.info-menu.active {
-    display: block;
-}
-
-
-.info-menu.active {
-    display: block;
-}
-
-footer{
-position: fixed;
-bottom: 0;
-font-weight: 400;
-color: white;
-
-
-}
+  }
+  
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+  }
+  .page2 p{
+    text-align: left;
+    font-family: "Arial", sans-serif;
+    font-size: 30px;
+    min-height: 50px;
+  }
+  
+  .menu{
+    color:white;
+    
+  
+  }
+  .button {
+    background-color: #f00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 21px;
+  }
+  
+  
+  .offcanvas-body {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100px;
+    font-style: normal;
+    font-size: large;
+    min-height: 2px;
+    background-color: #000;
+    color:white;
+  }
+  .offcanvas-body a {
+    text-decoration: none;
+  }
+  .offcanvas-header{
+    background-color: #000;
+    color: white;
+  }
+  .offcanvas-top.end-0 {
+    top: 0;
+    right: 0;
+    width: 300px; 
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    background-color: #f00;
+    border: #000;
+  }
+  
+  .offcanvas-top.end-0.show {
+    transform: translateX(0);
+    background-color: #f00;
+    border: #000;
+  }
+  .offcanvas-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #f00;
+    border: #000;
+  }
+  
+  .offcanvas-toggle.btn {
+    margin-top: 48px; /* adjust the margin to align with the header */
+    color: white;
+    background-color: #f00;
+    border: #000;
+    padding: 10px 20px;
+    margin-right: 50px;
+  }
+  .offcanvas-toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #f00;
+    border: #000;
+  }
+  .offcanvas-toggle.btn:hover {
+    background-color: #f00;
+  }
+  .offcanvas-toggle btn-primary {
+    --bs-btn-hover-border-color: rgba(255, 255, 255, 0);
+  }
+  
+  .interface{
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+  
+  section{
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
